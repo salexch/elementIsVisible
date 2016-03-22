@@ -5,7 +5,7 @@
     'use strict';
 
     function elementIsVisibile(element) {
-        if (element.nodeType !== 1 || element.isEqualNode(document.body)) {
+        if (!element || !element.nodeType || element.nodeType !== 1 || element.isEqualNode(document.body)) {
             return true;
         }
 
